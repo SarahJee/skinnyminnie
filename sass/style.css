@@ -20,7 +20,7 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 /*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
+>>> TABLE OF CONTENTS: 
 ----------------------------------------------------------------
 # Normalize
 # Typography
@@ -445,25 +445,23 @@ input[type="submit"] {
   border: 1px solid;
   border-color: #ccc #ccc #bbb;
   border-radius: 3px;
-  background: #e6e6e6;
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 13.5px;
-  font-size: 0.84375rem;
+  background: transparent;
+  color: #000;
+  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1;
-  padding: 0.6em 1em 0.4em; }
-  /* line 14, /Volumes/Macintosh HD/Users/Jee/Documents/Websites/www.skinny.dev/wp-content/themes/skinnyminnie/sass/forms/_buttons.scss */
+  padding: 0.5em 0.4em; }
+  /* line 16, /Volumes/Macintosh HD/Users/Jee/Documents/Websites/www.skinny.dev/wp-content/themes/skinnyminnie/sass/forms/_buttons.scss */
   button:hover,
-  input[type="button"]:hover,
-  input[type="reset"]:hover,
-  input[type="submit"]:hover {
-    border-color: #ccc #bbb #aaa; }
-  /* line 19, /Volumes/Macintosh HD/Users/Jee/Documents/Websites/www.skinny.dev/wp-content/themes/skinnyminnie/sass/forms/_buttons.scss */
   button:active,
   button:focus,
+  input[type="button"]:hover,
   input[type="button"]:active,
   input[type="button"]:focus,
+  input[type="reset"]:hover,
   input[type="reset"]:active,
   input[type="reset"]:focus,
+  input[type="submit"]:hover,
   input[type="submit"]:active,
   input[type="submit"]:focus {
     border-color: #aaa #bbb #bbb; }
@@ -683,53 +681,54 @@ a {
   padding: 1em;
   font-family: "Open Sans", "Lucida Grande", "Lucida Sans Unicode", Geneva, Arial, sans-serif;
   color: #fff;
-  background-color: #e6e6e6; }
+  background-color: #e6e6e6;
+  border-bottom: solid red 1px; }
   @media screen and (min-width: 600px) {
     /* line 11, /Volumes/Macintosh HD/Users/Jee/Documents/Websites/www.skinny.dev/wp-content/themes/skinnyminnie/sass/site/header/_header.scss */
     .site-header {
       padding: 1em 2em; } }
 
 /* For Logo */
-/* line 24, /Volumes/Macintosh HD/Users/Jee/Documents/Websites/www.skinny.dev/wp-content/themes/skinnyminnie/sass/site/header/_header.scss */
+/* line 25, /Volumes/Macintosh HD/Users/Jee/Documents/Websites/www.skinny.dev/wp-content/themes/skinnyminnie/sass/site/header/_header.scss */
 .site-branding {
   display: flex;
   min-height: 65px;
   /* Same as .custom-logo-link img */ }
 
-/* line 29, /Volumes/Macintosh HD/Users/Jee/Documents/Websites/www.skinny.dev/wp-content/themes/skinnyminnie/sass/site/header/_header.scss */
+/* line 30, /Volumes/Macintosh HD/Users/Jee/Documents/Websites/www.skinny.dev/wp-content/themes/skinnyminnie/sass/site/header/_header.scss */
 .custom-logo-link {
   margin-right: 1em; }
-  /* line 31, /Volumes/Macintosh HD/Users/Jee/Documents/Websites/www.skinny.dev/wp-content/themes/skinnyminnie/sass/site/header/_header.scss */
+  /* line 32, /Volumes/Macintosh HD/Users/Jee/Documents/Websites/www.skinny.dev/wp-content/themes/skinnyminnie/sass/site/header/_header.scss */
   .custom-logo-link img {
     display: block;
     height: 65px;
     /* Same as site-branding */
     width: auto; }
 
-/* line 38, /Volumes/Macintosh HD/Users/Jee/Documents/Websites/www.skinny.dev/wp-content/themes/skinnyminnie/sass/site/header/_header.scss */
+/* line 39, /Volumes/Macintosh HD/Users/Jee/Documents/Websites/www.skinny.dev/wp-content/themes/skinnyminnie/sass/site/header/_header.scss */
 .site-branding-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 65px; }
 
-/* line 45, /Volumes/Macintosh HD/Users/Jee/Documents/Websites/www.skinny.dev/wp-content/themes/skinnyminnie/sass/site/header/_header.scss */
+/* line 46, /Volumes/Macintosh HD/Users/Jee/Documents/Websites/www.skinny.dev/wp-content/themes/skinnyminnie/sass/site/header/_header.scss */
 .site-title {
   margin: 0;
   padding: 0;
   font-size: 1.6em;
   font-weight: 900;
   line-height: 1em; }
-  /* line 52, /Volumes/Macintosh HD/Users/Jee/Documents/Websites/www.skinny.dev/wp-content/themes/skinnyminnie/sass/site/header/_header.scss */
+  /* line 53, /Volumes/Macintosh HD/Users/Jee/Documents/Websites/www.skinny.dev/wp-content/themes/skinnyminnie/sass/site/header/_header.scss */
   .site-title a {
     color: white;
     text-decoration: none; }
-    /* line 57, /Volumes/Macintosh HD/Users/Jee/Documents/Websites/www.skinny.dev/wp-content/themes/skinnyminnie/sass/site/header/_header.scss */
+    /* line 58, /Volumes/Macintosh HD/Users/Jee/Documents/Websites/www.skinny.dev/wp-content/themes/skinnyminnie/sass/site/header/_header.scss */
     .site-title a:hover,
     .site-title a:focus {
       text-decoration: underline; }
 
-/* line 63, /Volumes/Macintosh HD/Users/Jee/Documents/Websites/www.skinny.dev/wp-content/themes/skinnyminnie/sass/site/header/_header.scss */
+/* line 64, /Volumes/Macintosh HD/Users/Jee/Documents/Websites/www.skinny.dev/wp-content/themes/skinnyminnie/sass/site/header/_header.scss */
 .site-description {
   margin: 0;
   font-size: .9em;
@@ -737,15 +736,15 @@ a {
   font-weight: 100; }
 
 @media screen and (min-width: 900px) {
-  /* line 71, /Volumes/Macintosh HD/Users/Jee/Documents/Websites/www.skinny.dev/wp-content/themes/skinnyminnie/sass/site/header/_header.scss */
+  /* line 72, /Volumes/Macintosh HD/Users/Jee/Documents/Websites/www.skinny.dev/wp-content/themes/skinnyminnie/sass/site/header/_header.scss */
   .site-header {
     display: flex;
     justify-content: space-between; }
-  /* line 76, /Volumes/Macintosh HD/Users/Jee/Documents/Websites/www.skinny.dev/wp-content/themes/skinnyminnie/sass/site/header/_header.scss */
+  /* line 77, /Volumes/Macintosh HD/Users/Jee/Documents/Websites/www.skinny.dev/wp-content/themes/skinnyminnie/sass/site/header/_header.scss */
   .site-branding {
     width: 35%;
     flex: 1 0 auto; }
-  /* line 81, /Volumes/Macintosh HD/Users/Jee/Documents/Websites/www.skinny.dev/wp-content/themes/skinnyminnie/sass/site/header/_header.scss */
+  /* line 82, /Volumes/Macintosh HD/Users/Jee/Documents/Websites/www.skinny.dev/wp-content/themes/skinnyminnie/sass/site/header/_header.scss */
   .site-navigation {
     width: 55%; } }
 
@@ -872,11 +871,13 @@ button.dropdown-toggle {
   .main-navigation ul {
     justify-content: flex-end;
     padding-top: 0;
-    /*If you want dropdowns to open on hover, uncomment this: */ }
-    /* line 160, /Volumes/Macintosh HD/Users/Jee/Documents/Websites/www.skinny.dev/wp-content/themes/skinnyminnie/sass/site/header/_header-menu.scss */
-    .main-navigation ul li:hover > ul,
-    .main-navigation ul li:focus > ul {
-      display: block; } }
+    /*If you want dropdowns to open on hover, uncomment this:
+			
+			li:hover > ul,
+				li:focus > ul {
+				display: block;
+			}
+			 */ } }
 
 /*--------------------------------------------------------------
 ## Posts and pages
@@ -920,6 +921,39 @@ button.dropdown-toggle {
 /* line 4, /Volumes/Macintosh HD/Users/Jee/Documents/Websites/www.skinny.dev/wp-content/themes/skinnyminnie/sass/site/primary/_comments.scss */
 .bypostauthor {
   display: block; }
+
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+/* line 1, /Volumes/Macintosh HD/Users/Jee/Documents/Websites/www.skinny.dev/wp-content/themes/skinnyminnie/sass/site/footer/_footer.scss */
+.site-header {
+  position: relative;
+  padding: 1em;
+  font-family: "Open Sans", "Lucida Grande", "Lucida Sans Unicode", Geneva, Arial, sans-serif;
+  color: #fff;
+  background-color: #e6e6e6; }
+  @media screen and (min-width: 600px) {
+    /* line 1, /Volumes/Macintosh HD/Users/Jee/Documents/Websites/www.skinny.dev/wp-content/themes/skinnyminnie/sass/site/footer/_footer.scss */
+    .site-header {
+      padding: 1em 2em; } }
+
+/* line 14, /Volumes/Macintosh HD/Users/Jee/Documents/Websites/www.skinny.dev/wp-content/themes/skinnyminnie/sass/site/footer/_footer.scss */
+.social-menu ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+  /* line 21, /Volumes/Macintosh HD/Users/Jee/Documents/Websites/www.skinny.dev/wp-content/themes/skinnyminnie/sass/site/footer/_footer.scss */
+  .social-menu ul a {
+    display: block;
+    padding: 0.5em 1em;
+    color: white;
+    text-decoration: none; }
+    /* line 28, /Volumes/Macintosh HD/Users/Jee/Documents/Websites/www.skinny.dev/wp-content/themes/skinnyminnie/sass/site/footer/_footer.scss */
+    .social-menu ul a:hover,
+    .social-menu ul a:focus {
+      text-decoration: underline; }
 
 /*--------------------------------------------------------------
 # Widgets

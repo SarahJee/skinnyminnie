@@ -44,8 +44,8 @@ function skinnyminnie_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'menu-1' => esc_html__( 'Header', 'skinnyminnie' ),
-		'menu-2' => esc_html__( 'Secondary', 'skinnyminnie' ),
+		'header-nav' => esc_html__( 'Main Navigation', 'skinnyminnie' ),
+		'social' => esc_html__( 'Social Menu', 'skinnyminnie' ),
 	) );
 
 	/*
@@ -125,6 +125,9 @@ function skinnyminnie_scripts() {
 		'expand' => __( 'Expand child menu', 'skinnyminnie' ),
 		'collapse' => __( 'Collapse child menu', 'skinnyminnie' ),
 	)); 
+	
+	/** Register and load font awesome CSS files using a CDN. */
+	wp_enqueue_style( 'skinnyminnie-font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css', array(), '4.0.3' );
 
 	wp_enqueue_script( 'skinnyminnie-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
@@ -133,6 +136,7 @@ function skinnyminnie_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'skinnyminnie_scripts' );
+
 
 /**
  * Implement the Custom Header feature.
