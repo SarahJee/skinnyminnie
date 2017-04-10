@@ -14,7 +14,7 @@ var gulp = require('gulp'),
 	newer = require('gulp-newer'),
 
 	// Name of working theme folder
-	root = '../' + themename + '/',
+	root = './',
 	scss = root + 'sass/',
 	js = root + 'js/',
 	img = root + 'images/',
