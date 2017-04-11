@@ -12,9 +12,11 @@
 ?>
 
 	</div><!-- #content -->
+	
+
+	<?php get_sidebar ( 'footer' ); ?>
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		v
 		
 		<nav class="social-menu">
 			<?php wp_nav_menu( array( 'theme_location' => 'social') ); ?>

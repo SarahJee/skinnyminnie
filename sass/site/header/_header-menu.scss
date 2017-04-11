@@ -1,9 +1,9 @@
 .main-navigation {
 	display: block;
-	
 	font-family: $font__sans;
 	font-weight: 400;
-	clear: left;
+	clear: left; 
+
 	
 	ul {
 		display: none;
@@ -62,6 +62,7 @@
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
+		background-color: $color__skin;
 	}
 	
 	.menu-item-has-children,
@@ -131,7 +132,7 @@ button.dropdown-toggle {
 					
 					a {
 						width: 218px;
-						background: none;
+						background-color: $color__skin;
 					}
 				}
 			}
@@ -149,6 +150,10 @@ button.dropdown-toggle {
 
 @media screen and (min-width: $query__medium) {
 	.main-navigation {
+		position: absolute;
+		width: 55%;
+		right: 0;
+		
 		
 		ul {
 			justify-content: flex-end;

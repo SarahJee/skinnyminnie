@@ -1,9 +1,10 @@
-.site-header {
+.site-footer {
 	position: relative;
 	padding: 1em;
 	font-family: $font__sans;
 	color: #fff;
 	background-color: $color__skin;
+	text-align: center;
 	
 	@media screen and (min-width: $query__small) {
 		padding: 1em 2em;
@@ -11,6 +12,8 @@
 }
 
 .social-menu {
+	background-color: $color__skin;
+	
 	ul {
 		display: flex;
 		justify-content: center;
@@ -31,3 +34,8 @@
 		}
 	}
 }
+
+.site-info {
+	margin: 0 auto;
+}
+

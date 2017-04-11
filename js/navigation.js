@@ -1,20 +1,20 @@
 /* global skinnyminnieScreenReaderText */
 /**
- * Theme functions file.
+ * Theme functions file.  
  *
  * Contains handlers for navigation and widget area.
- */
+ */ 
 
-(function( $ ) {
+(function( $ ) { 
 	var masthead, menuToggle, siteNavigation;
 
 	function initMainNavigation( container ) {
 
 		// Add dropdown toggle that displays child menu items.
-		var dropdownToggle = $( '<button />', { 'class': 'dropdown-toggle', 'aria-expanded': false });
-			
-			.append( $( '<i>', { 'class': 'fa fa-chevron-up', text: '' }) );
-			.append( $( '<span />', { 'class': 'screen-reader-text', text: skinnyminnieScreenReaderText.expand }) );
+		var dropdownToggle = $( '<button />', { 'class': 'dropdown-toggle', 'aria-expanded': false })
+			.append( $( '<i>', { 
+				'class': 'fa fa-chevron-down dropdown-symbol'  
+				}) );
 
 		container.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( dropdownToggle );
 		
@@ -26,8 +26,8 @@
 			var _this = $( this ),
 				screenReaderSpan = _this.find( '.screen-reader-text' );
 				dropdownSymbol = _this.find( '.dropdown-symbol' );
-				dropdownSymbol.text( dropdownSymbol.text() === '-' ? '<i class=“fa fa-chevron-up” aria-hidden=“true”></i>' : '-');
-
+				dropdownSymbol.toggleClass( 'fa-chevron-up fa-chevron-down' );
+				
 			e.preventDefault();
 			_this.toggleClass( 'toggled-on' );
 			_this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );

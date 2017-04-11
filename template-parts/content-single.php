@@ -10,8 +10,18 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	
+	<?php // Featured image on posts 
+	if ( has_post_thumbnail() ) { ?>
+	<figure class="featured-image full-bleed">
+	<?php //max image size for featured image on posts 2000x1200
+		the_post_thumbnail( 'skinnyminnie-full-bleed'); 
+	?>
+	</figure><!-- .featured-image .full-bleed -->
+	<?php } ?>
+	
+	
 	<header class="entry-header">
-		<?php skinnyminnie_the_category_list(); ?>
 		<?php
 		if ( is_single() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -19,14 +29,29 @@
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
-		if ( 'post' === get_post_type() ) : ?>
+		if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
 		<div class="entry-meta">
 			<?php skinnyminnie_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
 	</header><!-- .entry-header -->
+	
+	
 
+
+<section class ="post-content">
+	
+		<?php 
+		if ( !is_active_sidebar( 'sidebar-1' ) ) : ?>  
+		<div class="post-content__wrap">
+		<div class="entry-meta">
+			<?php skinnyminnie_posted_on(); ?>
+		</div><!-- .entry-meta -->
+		<div class="post-content__body">
+		<?php
+		endif; ?>
+		
 	<div class="entry-content">
 		<?php
 			the_content( sprintf(
@@ -45,4 +70,20 @@
 	<footer class="entry-footer">
 		<?php skinnyminnie_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
+		
+		<?php 
+		if ( !is_active_sidebar( 'sidebar-1' ) ) : ?>
+		</div><!-- .post-content__body -->
+		</div><!-- .post-content__wrap -->
+		<?php endif; ?>
+	
+		<?php the_post_navigation();
+
+			// If comments are open or we have at least one comment, load up the comment template.
+			if ( comments_open() || get_comments_number() ) :
+				comments_template();
+			endif; ?>
+</section>			
+			
+		<?php get_sidebar(); ?>
 </article><!-- #post-## -->

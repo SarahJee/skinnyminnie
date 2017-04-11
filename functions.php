@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package Skinny_Minnie
- */
+ */ 
 
 if ( ! function_exists( 'skinnyminnie_setup' ) ) :
 /**
@@ -41,6 +41,7 @@ function skinnyminnie_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
+	add_image_size( 'skinnyminnie-full-bleed', 2000, 1200, true);
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -106,6 +107,17 @@ function skinnyminnie_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer Widgets', 'skinnyminnie' ),
+		'id'            => 'sidebar-footer',
+		'description'   => esc_html__( 'Add widgets here.', 'skinnyminnie' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	
 }
 add_action( 'widgets_init', 'skinnyminnie_widgets_init' );
 
@@ -123,9 +135,11 @@ function skinnyminnie_scripts() {
 	
 	wp_localize_script( 'skinnyminnie-navigation', 'skinnyminnieScreenReaderText', array(
 		'expand' => __( 'Expand child menu', 'skinnyminnie' ),
-		'collapse' => __( 'Collapse child menu', 'skinnyminnie' ),
+		'collapse' => __( 'Collapse child menu', 'skinnyminnie' ),	
 	)); 
 	
+	wp_enqueue_script( 'skinnyminnie-functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), '20161201', true );
+		
 	/** Register and load font awesome CSS files using a CDN. */
 	wp_enqueue_style( 'skinnyminnie-font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css', array(), '4.0.3' );
 

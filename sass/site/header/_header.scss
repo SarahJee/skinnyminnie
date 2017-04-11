@@ -4,27 +4,24 @@
 	
 	img {
 		display: block;
-		width: 100%;
+		width: 100vw;
 	}
 }
-
 .site-header {
 	position: relative;
 	padding: 1em;
 	font-family: $font__sans;
 	color: #fff;
 	background-color: $color__skin;
-	border-bottom: solid red 1px; 
 	
 	@media screen and (min-width: $query__small) {
 		padding: 1em 2em;
 	}
 }
 
-/* For Logo */
 .site-branding {
 	display: flex;
-	min-height: 65px; /* Same as .custom-logo-link img */
+	min-height: 65px;
 }
 
 .custom-logo-link {
@@ -36,7 +33,7 @@
 	}
 }
 
-.site-branding-text {
+.site-branding__text {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -79,13 +76,12 @@
 		flex: 1 0 auto;
 	}
 	
-	.site-navigation  {
+	.site-navigation {
 		width: 55%;
 	}
 }
 
-
-/* Header Menu */
-
-
+/*
+Header Menu
+*/
 @import "header-menu";
